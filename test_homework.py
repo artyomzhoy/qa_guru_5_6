@@ -82,6 +82,7 @@ def test_find_suitable_user():
 
 def reformat_function_name(function, *args):
     function_name = f'{function.__name__.replace("_", " ").title()} [{", ".join(args)}]'
+    print(function_name)
     return function_name
 
 
