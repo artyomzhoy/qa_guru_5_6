@@ -41,7 +41,10 @@ print(bool({}))
 
 user_list = []
 
-if user_list:
+if user_list:  # если список пользователей не пустой
+    print(user_list)
+
+if len(user_list) != 0:  # то же самое
     print(user_list)
 
 items_count = 0

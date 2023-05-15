@@ -70,9 +70,10 @@ nums = return_numbers()
 
 print(nums)
 
-num1, *other_nums = return_numbers()
+num1, *other_nums = return_numbers()  # * - все остальные значения, которые есть
 
 print(num1, other_nums)
+
 
 # Переменное количество аргументов на примере print
 
@@ -86,10 +87,12 @@ def custom_print(i):
 
 
 custom_print(0)
+
+
 # custom_print(1, 2, 3, 4, 5)
 
 
-def sum_numbers(**kwargs):
+def sum_numbers(**kwargs):  # именованные аргументы
     print(kwargs)
     sum = 0
     for v in kwargs.values():
@@ -99,18 +102,11 @@ def sum_numbers(**kwargs):
 
 sum_numbers(num1=10, num2=15, num3=25)
 
-
 # Функция - тоже объект
 
 p = print
 
 p("hello, world!")
-
-
-def get_age(user: dict):
-    print("берем возраст", user["name"])
-    return user["age"]
-
 
 users = [
     {"name": "Oleg", "age": 32},
@@ -120,17 +116,23 @@ users = [
     {"name": "Maria", "age": 18},
 ]
 
+
+def get_age(user: dict):
+    print("берем возраст", user["name"])
+    return user["age"]
+
+
 print(get_age(users[0]))
 
-
 users.sort(key=get_age, reverse=True)
-import pprint
+
+import pprint  # отформатированный принт?
 
 pprint.pprint(users)
 
 users.sort(key=itemgetter("age"))
 
-users.sort(key=lambda user: user["age"])
+users.sort(key=lambda user: user["age"])  # lambda анонимная функция, которая существует только здесь
 pprint.pprint(users)
 
 # Сортируем по возрасту

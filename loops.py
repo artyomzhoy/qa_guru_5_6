@@ -8,7 +8,7 @@ password_from_user = 54321
 password_incorrect = actual_password == password_from_user
 
 while password_incorrect:
-    pass
+    pass  # оператор, который ничего не делает
 
 
 run_count = 0
